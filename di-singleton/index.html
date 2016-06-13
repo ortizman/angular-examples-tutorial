@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body ng-app="principal">
+<div ng-controller="saludoCtrl">
+	<button ng-click="saludo()">Saludame</button>	
+	
+	<div ng-show="hello.length">
+		<h2 ng-repeat="s in hello">{{s}} 
+		<small>[<span><a href ng-click="remove($index)"> X </a>]</small></h2></span>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="di.js"></script>
+</div>
+
+</body>
+</html>

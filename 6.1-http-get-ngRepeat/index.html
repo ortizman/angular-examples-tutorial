@@ -1,0 +1,15 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+  </head>
+    <body ng-app="app" ng-controller="SimpleCtrl as simple">
+
+        <button ng-click="simple.getBasketballTeam()">Json del <strong>Equipo</strong></button>
+        <a href ng-click="simple.clean()"> borrar </a>
+        <pre>{{simple.getTeam() | json:4}}</pre>
+        <table-team></table-team>
+    </body>
+    <script src="../libs/angular.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+</html>

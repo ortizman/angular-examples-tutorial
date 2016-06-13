@@ -1,0 +1,29 @@
+<div ng-if="simple.isShowTable()">
+  <table class="table table-bordered">
+      <caption>Selecci&oacute;n Argentina de Basquet </caption>
+    <thead>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Apellido
+      </th>
+      <th>
+        Altura
+      </th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="jugador in simple.getTeam()">
+      <td>
+        {{jugador.nombre}}
+      </td>
+      <td>
+        {{jugador.apellido}}
+      </td>
+      <td>
+        {{jugador.altura}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

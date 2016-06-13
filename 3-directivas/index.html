@@ -1,0 +1,14 @@
+
+<html>
+    <body ng-app="app" ng-controller="SimpleCtrl as simple">
+
+        <input type="text" ng-model="simple.texto">
+
+        <h2>{{simple.texto}}</h2>
+
+        <img src="../img/AngularJS_logo.svg" ng-if="simple.texto == 'angular'"> </img>
+
+        <script src="../libs/angular.js" charset="utf-8"></script>
+        <script src="app.js" charset="utf-8"></script>
+    </body>
+</html>
