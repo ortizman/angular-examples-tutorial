@@ -1,11 +1,15 @@
 
 <html>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+    </head>
     <body ng-app="app" ng-controller="SimpleCtrl as simple">
 
-        <div ng-if="simple.texto == 'clima'">
           <button ng-click="simple.clima()">Json del Clima</button>
+          <a href ng-click="simple.clean()"> borrar </a>
           <pre>{{simple.getClimaJson() | json:4}}</pre>
-        </div>
+
+          <show-clima datos="simple.getClimaJson()"></show-clima>
 
     </body>
     <script src="../libs/angular.js" charset="utf-8"></script>

@@ -1,0 +1,23 @@
+[
+  {
+    "nombre":"Luis",
+    "apellido":"scola",
+    "altura":"2,06"
+  },
+  {
+    "nombre":"emanuel",
+    "apellido":"Ginóbili",
+    "altura":"1,98"
+  },
+  {
+    "nombre":"Facundo",
+    "apellido":"campazzo",
+    "altura":"1,79"
+  },
+  {
+    "nombre":"Andres",
+    "apellido":"Nocioni",
+    "altura":"2,01"
+  }
+
+]

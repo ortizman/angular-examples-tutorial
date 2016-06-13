@@ -18,18 +18,10 @@ app.factory('ClimaService', ['$http', '$q', function($http, $q){
 
 app.controller('SimpleCtrl', ['ClimaService', function(ClimaService) {
 
-  this.texto = "AngularJS";
-  var basketballTeam = null;
-  var climaJson = null;
-
-  this.getBasketballTeam = function() {
-    ClimaService.getClima().then(function(response) {
-      basketballTeam = response.data;
-    });
-  };
+  var climaJson = undefined;
 
   this.clima = function () {
-    $http.get('http://clima.info.unlp.edu.ar/last').then(function(response){
+    ClimaService.getClima().then(function(response){
       climaJson = response.data;
     });
   };
@@ -38,35 +30,18 @@ app.controller('SimpleCtrl', ['ClimaService', function(ClimaService) {
     return climaJson;
   };
 
-  this.getTeam = function () {
-    return basketballTeam;
-  };
+  this.clean = function(){
+    climaJson = undefined;
+  }
 
 }]);
 
-  app.directive('showIfAngular', function() {
+app.directive('showClima', function(){
     return {
-      restrict: 'AE',
+      restrict: 'E',
       scope:{
-        texto:'=word'
+        datos:'='
       },
-      templateUrl:'html/showIfAngular.html'
+      templateUrl:'html/showClima.html'
     };
-  });
-
-  app.directive('encabezado', function(){
-    return {
-      restrict: 'AE',
-      templateUrl:'html/header.html'
-    };
-  });
-
-  app.directive('showIfTabla', function(){
-    return {
-      restrict: 'AE',
-      scope:{
-        texto:'=word'
-      },
-      templateUrl:'html/showIfTabla.html'
-    };
-  });
+});
