@@ -33,5 +33,5 @@ app.directive('tableTeam', function(){
   return {
     restrict:'E',
     templateUrl: 'html/table-team.html'
-  }
-})
+  };
+});
