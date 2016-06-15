@@ -1,0 +1,20 @@
+
+<html>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+    </head>
+    <body ng-app="app" ng-controller="SimpleCtrl">
+
+          <button ng-click="clima()">Json del Clima</button>
+          <a href ng-click="clean()"> borrar </a>
+          <pre>{{climaJson | json:4}}</pre>
+
+          <show-clima datos="climaJson"></show-clima>
+
+    </body>
+    <script src="../libs/angular.js" charset="utf-8"></script>
+    <script src="app.modules.js" charset="utf-8"></script>
+    <script src="clima/clima.directive.js" charset="utf-8"></script>
+    <script src="principal/principal.controller.js" charset="utf-8"></script>
+    <script src="principal/principal.service.js" charset="utf-8"></script>
+</html>

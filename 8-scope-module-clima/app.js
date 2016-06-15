@@ -1,4 +1,4 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['climamod']);
 app.factory('ClimaService', ['$http', '$q', function($http, $q){
   var
     getClima = function(){
@@ -17,31 +17,18 @@ app.factory('ClimaService', ['$http', '$q', function($http, $q){
 }]);
 
 app.controller('SimpleCtrl', ['ClimaService',
-function(ClimaService) {
-  var climaJson;
+ '$scope',
+function(ClimaService, $scope) {
+  $scope.climaJson = undefined;
 
-  this.clima = function () {
+  $scope.clima = function () {
     ClimaService.getClima()
     .then(function(response){
-      climaJson = response.data;
+      $scope.climaJson = response.data;
     });
   };
 
-  this.getClimaJson = function(){
-    return climaJson;
-  };
-
-  this.clean = function(){
-    climaJson = undefined;
+  $scope.clean = function(){
+    $scope.climaJson = undefined;
   };
 }]);
-
-app.directive('showClima', function(){
-    return {
-      restrict: 'E',
-      scope:{
-        datos:'='
-      },
-      templateUrl:'html/showClima.html'
-    };
-});

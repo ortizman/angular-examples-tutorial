@@ -1,0 +1,21 @@
+<form>
+  <div class="form-group">
+    <label for="nombreItem">Nombre del Item</label>
+    <input type="text" class="form-control" id="nombreItem" ng-model="item.nombre" placeholder="Item">
+  </div>
+  <div class="form-group">
+    <label for="itemDescripcion">Descripcion</label>
+    <input type="text" class="form-control" id="itemDescripcion" ng-model="item.descripcion" placeholder="Descripcion">
+  </div>
+  <div class="form-group">
+    <label for="itemCantidad">Cantidad</label>
+    <input type="number" id="itemCantidad" ng-model="item.cantidad">
+    <p class="help-block">Ingrese la cantidad de estos items.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="item.estaPago"> Esta pago?
+    </label>
+  </div>
+  <button type="submit" ng-click="guardar(item)" class="btn btn-default">Submit</button>
+</form>

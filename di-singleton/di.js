@@ -6,15 +6,15 @@ app.service('saludoService', [function(){
 	};
 }]);
 
-app.controller('saludoCtrl', ['saludoService', '$scope', 
+app.controller('saludoCtrl', ['saludoService', '$scope',
 	function(saludoService, $scope){
 		var count = 0; // cuanta la cantidad de saludos
 		$scope.hello = []; //inicializo el array vacio
 		$scope.saludo = function() {
 			$scope.hello.push(count++ + " - " +saludoService.saludar());
-		}
+		};
 
 		$scope.remove = function(index) {
 			$scope.hello.splice(index, 1);
-		}
-}])
+		};
+}]);

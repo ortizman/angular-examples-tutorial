@@ -4,10 +4,11 @@
 * Description
 */
 angular.module('myapp', [
-	'ui.router', 
+	'ui.router',
 	'myapp.inventario',
 	'myapp.home',
-	'myapp.about'
+	'myapp.about',
+	'LocalStorageModule'
 ]);
 
 angular.module('myapp.home', []);

@@ -1,0 +1,26 @@
+<div ng-if="datos !== undefined">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Temperatura</h3>
+    </div>
+    <div class="panel-body">
+      {{datos.temperature}} ºC
+    </div>
+  </div>
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title">Humedad</h3>
+    </div>
+    <div class="panel-body">
+      {{datos.humidity}} %
+    </div>
+  </div>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Presi&oacute;n atmosf&eacute;rica</h3>
+    </div>
+    <div class="panel-body">
+      {{datos.bar}} hPa
+    </div>
+  </div>
+</div>

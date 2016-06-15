@@ -7,7 +7,7 @@ angular.module('myapp.home')
 				templateUrl: 'js/home/views/home.html'
 			}
 		}
-	});			
+	});
 
 	$urlRouterProvider.otherwise('/home');
-}])
+}]);

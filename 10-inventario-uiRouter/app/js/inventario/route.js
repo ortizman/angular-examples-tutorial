@@ -14,9 +14,23 @@ angular.module('myapp.inventario')
 			url: '/inventario-list',
 			views:{
 				'sub-body': {
-					templateUrl: 'js/inventario/views/body.html',
+					templateUrl: 'js/inventario/views/listItems.html',
+					controller: 'InventarioCtrl',
+					resolve: {
+						items:['IntentarioService', function(IntentarioService) {
+							return IntentarioService.getItems();
+						}]
+					}
+				}
+			}
+		})
+		.state('home.inventario.nuevo', {
+			url: '/inventario/nuevo',
+			views:{
+				'sub-body': {
+					templateUrl: 'js/inventario/views/nuevoItem.html',
 					controller: 'InventarioCtrl'
 				}
 			}
-		});		
+		});
 }]);
