@@ -1,5 +1,6 @@
 angular.module('myapp.inventario')
-.controller('InventarioCtrl', ['$scope', 'IntentarioService', function($scope, IntentarioService){
+.controller('InventarioCtrl', ['$scope', 'IntentarioService',
+function($scope, IntentarioService){
 
 	$scope.nuevo = function() {
 		$scope.item = {};

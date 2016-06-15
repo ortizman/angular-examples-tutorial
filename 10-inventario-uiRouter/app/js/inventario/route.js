@@ -15,12 +15,7 @@ angular.module('myapp.inventario')
 			views:{
 				'sub-body': {
 					templateUrl: 'js/inventario/views/listItems.html',
-					controller: 'InventarioCtrl',
-					resolve: {
-						items:['IntentarioService', function(IntentarioService) {
-							return IntentarioService.getItems();
-						}]
-					}
+					controller: 'InventarioCtrl'
 				}
 			}
 		})
@@ -30,6 +25,9 @@ angular.module('myapp.inventario')
 				'sub-body': {
 					templateUrl: 'js/inventario/views/nuevoItem.html',
 					controller: 'InventarioCtrl'
+				},
+				params: {
+          item: 'bb'
 				}
 			}
 		});
