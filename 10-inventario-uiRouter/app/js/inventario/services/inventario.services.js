@@ -11,6 +11,12 @@ factory('IntentarioService', ['localStorageService', function(localStorageServic
       localStorageService.set('items', items);
     },
 
+    editItem = function(item, index){
+      var items = localStorageService.get('items');
+      items.splice(index, 1, item);
+      localStorageService.set('items', items);
+    },
+
     getItem = function(index) {
       return localStorageService.get('items')[index];
     },
@@ -27,6 +33,7 @@ factory('IntentarioService', ['localStorageService', function(localStorageServic
 
     return {
       saveItem: saveItem,
+      editItem: editItem,
       getItem: getItem,
       getItems: getItems,
       borrarItem: borrarItem

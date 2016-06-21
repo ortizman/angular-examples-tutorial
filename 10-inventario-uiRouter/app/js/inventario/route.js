@@ -25,10 +25,36 @@ angular.module('myapp.inventario')
 				'sub-body': {
 					templateUrl: 'js/inventario/views/nuevoItem.html',
 					controller: 'InventarioCtrl'
-				},
-				params: {
-          item: 'bb'
 				}
 			}
+		})
+		.state('home.inventario.edit', {
+			url: '/inventario/nuevo/:index',
+			views:{
+				'sub-body': {
+					templateUrl: 'js/inventario/views/nuevoItem.html',
+					controller: 'InventarioCtrl'
+				}
+			},
+			params: {
+					itemSelected: null
+			}
 		});
+		// .state('home.inventario.edit', {
+		// 	url: '/inventario/edit',
+		// 	views:{
+		// 		'sub-body': {
+		// 			templateUrl: 'js/inventario/views/nuevoItem.html',
+		// 			controller: 'InventarioEditCtrl',
+		// 			resolve:{
+		// 				itemSelected: ['$stateParams', function($stateParams) {
+		// 					return $stateParams.itemSelected;
+		// 				}]
+		// 			}
+		// 		}
+		// 	},
+		// 	params: {
+		// 		itemSelected: null
+		// 	}
+		// });
 }]);

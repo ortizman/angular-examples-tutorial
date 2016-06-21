@@ -33,7 +33,10 @@
         {{itm.estaPago}}
       </td>
       <td>
-        <span class="glyphicon glyphicon-pencil"></span>
+
+        <span ui-sref="home.inventario.edit({itemSelected:itm, index:$index})"
+              class="glyphicon glyphicon-pencil"></span>
+              
         <span ng-click="borrar($index)" class="glyphicon glyphicon-remove"></span>
 
       </td>

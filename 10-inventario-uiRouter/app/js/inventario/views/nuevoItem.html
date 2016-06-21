@@ -17,5 +17,10 @@
       <input type="checkbox" ng-model="item.estaPago"> Esta pago?
     </label>
   </div>
-  <button type="submit" ng-click="guardar(item)" class="btn btn-default">Submit</button>
+
+  <button ng-hide="isEdit" type="submit" ng-click="guardar(item)"
+    class="btn btn-default">Crear nuevo Item</button>
+  <button ng-show="isEdit" type="submit" ng-click="editar(item, index)"
+    class="btn btn-default">Editar el Item</button>
+
 </form>
