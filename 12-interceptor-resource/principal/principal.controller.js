@@ -1,17 +1,23 @@
-angular.module('principal')
-.controller('SimpleCtrl', ['MockService', '$scope', function(MockService, $scope) {
+'use strict';
 
-  $scope.climaJson = undefined;
+angular.module('principal')
+.controller('SimpleCtrl', ['MockService', '$scope', '$q', function(MockService, $scope, $q) {
+
+  $scope.climaJson = undefined;  
 
   $scope.getPosts = function () {
-    MockService.posts().$promise
-    .then(function(response){
-      $scope.posts = response.data;
-    })
-    .catch(function(response){
-      $scope.mensaje = response.error;
-    });
 
+    var $defer = $q.defer();
+
+    MockService.posts()
+    .$promise      
+    .then(function(response){
+      $scope.posts = response;
+    })
+    .then($defer.resolve)
+    .catch($defer.reject);
+
+    return $defer.promise;
   };
 
   $scope.clean = function(){
