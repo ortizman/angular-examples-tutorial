@@ -37,7 +37,8 @@ angular.module('myapp.inventario')
 				}
 			},
 			params: {
-					itemSelected: null
+				itemSelected: null,
+				obj:null
 			}
 		});
 		// .state('home.inventario.edit', {

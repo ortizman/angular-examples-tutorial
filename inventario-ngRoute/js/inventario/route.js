@@ -3,5 +3,5 @@ angular.module('myapp.inventario')
 	$routeProvider.when('/inventario', {
 		templateUrl: 'js/inventario/views/inventario.html',
 		controller: 'InventarioCtrl'
-	})
-}])
+	});
+}]);

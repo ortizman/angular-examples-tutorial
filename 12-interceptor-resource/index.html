@@ -1,0 +1,23 @@
+
+<html>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+    </head>
+    <body ng-app="app" ng-controller="SimpleCtrl">
+
+          <button ng-click="getPosts()">Posts Json</button>
+          <a href ng-click="clean()"> borrar </a>
+          <pre>{{posts | json:4}}</pre>
+
+    </body>
+    <script src="../libs/angular.js" charset="utf-8"></script>
+    <script src="//code.angularjs.org/1.4.9/angular-resource.js" charset="utf-8"></script>
+    <script src="app.modules.js" charset="utf-8"></script>
+    <script src="principal/principal.controller.js" charset="utf-8"></script>
+    <script src="principal/auth-service.services.js" charset="utf-8"></script>
+    <script src="principal/http-headers-interceptor.js" charset="utf-8"></script>
+    <script src="principal/mock.service.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="libs/angular-local-storage.js"></script>
+
+</html>
