@@ -1,0 +1,24 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ar.com.redlink.sigma"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ar.com.redlink.sigma"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "ar.com.redlink.sigma"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "ar.com.redlink.sigma"
+        }
+    },
+    "dependent_plugins": {}
+}

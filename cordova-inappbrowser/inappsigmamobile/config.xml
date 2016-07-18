@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ar.com.redlink.sigma" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SigmaMobile</name>
+    <description>
+        Aplicacion de apache cordova que embebe sigma mobile
+    </description>
+    <author email="manuel.ortiz@fluxit.com.ar">
+        Fluxit SA
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <icon src="res/logo.png" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="1000" />
+    <platform name="android">
+        <preferece name="android-minSdkVersion" value="19" />
+        <splash density="land-hdpi" src="res/android/splash/drawable-port-hdpi-screen.png" />
+        <splash density="land-ldpi" src="res/android/splash/drawable-port-ldpi-screen.png" />
+        <splash density="land-mdpi" src="res/android/splash/drawable-port-mdpi-screen.png" />
+        <splash density="land-xhdpi" src="res/android/splash/drawable-port-xhdpi-screen.png" />
+        <splash density="port-hdpi" src="res/android/splash/drawable-port-hdpi-screen.png" />
+        <splash density="port-ldpi" src="res/android/splash/drawable-port-ldpi-screen.png" />
+        <splash density="port-mdpi" src="res/android/splash/drawable-port-mdpi-screen.png" />
+        <splash density="port-xhdpi" src="res/android/splash/drawable-port-xhdpi-screen.png" />
+    </platform>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="~5.1.1" />
+    <preference name="xwalkVersion" value="19+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+</widget>
